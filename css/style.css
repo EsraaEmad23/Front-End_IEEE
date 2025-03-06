@@ -32,7 +32,7 @@ body{
     width:10px;
     height: 10px;
     border-radius: 50%;
-    background-color: rgb(115, 166, 233);
+    background-color: #2196f3;
     top:50%;
     transform: translateY(-50%);
     transition: all 0.8s ease-in-out;
@@ -44,7 +44,7 @@ body{
     right: -20px;
 }
 .h1-Testimonials:hover{
-    background-color: rgb(115, 166, 233);
+    background-color: #2196f3;
     color: white;
     cursor: text;
     border-color: white;
@@ -125,12 +125,13 @@ body{
     align-items: center;
     justify-content: space-between;
     border-radius: 15px;
+    margin-bottom: 30px;
 }
 
 .cards img{
     width: 320px;
     height: 70%;
-    top: 60px;
+    top: 35px;
     right: 15%;
     border-radius: 10px;
     position: absolute;
@@ -140,7 +141,7 @@ body{
     position: relative;
     width: 100%;
     right: 3%;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     display: flex;
     align-items: flex-end;
@@ -186,54 +187,83 @@ body{
  transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
  opacity: 0;
 }
-
-.member1:hover::before, .member2:hover::before,
-.member3:hover::before, .member4:hover::before,
-.member5:hover::before, .member6:hover::before,
-.member7:hover::before, .member8:hover::before {
+.team-members .cards:hover::before{
  right: 0;
  opacity: 1;
 }
-.member1 img,
-.member2 img,
-.member3 img,
-.member4 img,
-.member5 img,
-.member6 img,
-.member7 img,
-.member8 img {
+.team-members .cards img  {
     transition: filter 0.5s ease-in-out;
 }
-
-.member1:hover img,
-.member2:hover img,
-.member3:hover img,
-.member4:hover img,
-.member5:hover img,
-.member6:hover img,
-.member7:hover img,
-.member8:hover img {
+.team-members .cards:hover img{
     filter: grayscale(100%);
 }
-.member1 .content .name-color,.member2 .content .name-color,
-.member3 .content .name-color,.member4 .content .name-color,
-.member5 .content .name-color,.member6 .content .name-color,
-.member7 .content .name-color,.member8 .content .name-color
-{
-    z-index: 2;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-}
-.member1:hover .content .name-color ,.member2:hover .content .name-color,
-.member3:hover .content .name-color,.member4:hover .content .name-color,
-.member5:hover .content .name-color,.member6:hover .content .name-color,
-.member7:hover .content .name-color,.member8:hover .content .name-color{
+
+.team-members .cards:hover .content .name-color{
     color: rgb(128, 128, 128); 
 }
-.memmber1:not(:hover)::before,.member2:not(:hover)::before,
-.member3:not(:hover)::before,.member4:not(:hover)::before,
-.member5:not(:hover)::before,.member6:not(:hover)::before,
-.member7:not(:hover)::before,.member8:not(:hover)::before
-{
-    right: -100%;
-}  
+/* Skills */
+.skills {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+    margin-left: calc(-5vw);
+    background-color: white;
+}
+.skills-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    padding: 20px;
+}
+.skills-image img {
+    max-width: 100%;
+    height: auto;
+}
+.skills-content {
+    width: 60%;
+}
+.skill {
+    margin-bottom: 15px;
+}
+
+.progress {
+    background: #ddd;
+    height: 35px;
+    border-radius: 2px;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.progress span {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100%;
+    background: #007bff;
+    border-radius: 5px;
+    position: relative;
+    padding-right: 10px;
+    color: white;
+    font-weight: bold;
+}
+.skills h3{
+    font-weight: bold;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.skills h3 span {
+    font-size: 12px;
+    border: 1px solid #ccc;
+    padding: 3px 5px;
+    border-radius: 4px;
+    color:#007bff;
+    font-weight: bold;
+    margin-left: auto;
+}
