@@ -454,7 +454,7 @@ body{
 .avilable-works div:hover img {
     z-index: 2;
 }
-/* Media Queries for Responsive Design */
+/* Responsive Design */
 @media (max-width: 1000px) {
     .feedback, .feedbacks {
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -497,18 +497,20 @@ body{
         .textt-content {
             text-align: center;
         }
-        
+        .team-members {
+            grid-template-columns: repeat(2, minmax(300px, 1fr));
+            gap: 20px;
+        }
 }
-
 @media (max-width: 768px) {
-    /* How it Works Section */
-
-    /* Services Section */
     .services-container {
           gap: 15px;
           grid-template-columns: repeat(1, minmax(350px, 1fr));
         }
     .service-card {
         width: 100%;
+    }
+    .team-members {
+        grid-template-columns: repeat(1, minmax(350px, 1fr));
     }
 }
