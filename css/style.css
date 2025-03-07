@@ -127,7 +127,12 @@ body{
     border-radius: 15px;
     margin-bottom: 30px;
 }
-
+.cards:hover{
+    transform: translateX(-20px);
+}
+.cards:not(:hover){
+    transform: translateX(20px);
+}
 .cards img{
     width: 320px;
     height: 70%;
@@ -136,6 +141,7 @@ body{
     border-radius: 10px;
     position: absolute;
     z-index: 1;
+    transition: filter 0.5s ease-in-out;
 }
 .social-icons{
     position: relative;
@@ -173,26 +179,19 @@ body{
     border-radius: 15px;
     transition: all 0.3s ease-in-out;
 }
-.member1::before,.member2::before,
-.member3::before,.member4::before,
-.member5::before,.member6::before,
-.member7::before,.member8::before
+.cards::before
 {
  content: "";
  position: absolute;
  top: 0;
  right: 0;
  height: 100%;
- background: rgba(0, 0, 0, 0.5);
- transition: right 0.5s ease-in-out, opacity 0.5s ease-in-out;
- opacity: 0;
+ background: rgba(241, 238, 238, 0.5);
+ border-radius: 10px;
+ transition: left 0.5s ease-in-out;
 }
 .team-members .cards:hover::before{
- right: 0;
- opacity: 1;
-}
-.team-members .cards img  {
-    transition: filter 0.5s ease-in-out;
+ left: 0;
 }
 .team-members .cards:hover img{
     filter: grayscale(100%);
